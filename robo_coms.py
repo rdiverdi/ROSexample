@@ -17,7 +17,7 @@ class ArduinoComs(object): #classes make things better, promise
 
         rospy.Subscriber('cmd_vel', Twist, self.cmd_vel_cb)
         rospy.Subscriber('blink_rate', Int16, self.blink_cb)
-        self.ser = serial.Serial('/dev/ttyUSB0')
+        self.ser = serial.Serial('/dev/ttyAMA0')
 
     def cmd_vel_cb(self, msg):
         vel = str(msg.linear.x)
