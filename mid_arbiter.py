@@ -42,13 +42,13 @@ class Midbrain_Arbiter(object):
 		vel = vel_sum_array.argmax()
 		turn = turn_sum_array.argmax()
 		msg = Twist()
-		msg.linear.x = vel/(ARRAY_SIZE-1)
-		msg.angular.z = turn/(ARRAY_SIZE-1) - 0.5
+		msg.linear.x = 2*vel/(ARRAY_SIZE-1)-1
+		msg.angular.z = 2*turn/(ARRAY_SIZE-1)-1
 		self.cmd_vel_pub.publish(msg)
 
 if __name__ == '__main__':
 	main = Midbrain_Arbiter()
-	r = rospy.Rate(1)
+	r = rospy.Rate(50)
 	while not rospy.is_shutdown():
 		main.run()
 		r.sleep()
