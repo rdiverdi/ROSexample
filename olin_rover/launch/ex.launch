@@ -1,0 +1,5 @@
+<launch>
+	<node pkg="olin_rover" name="mid_arbiter" type="mid_arbiter.py"/>
+	<node pkg="olin_rover" name="waypoints" type="wpt.py"/>
+	<node pkg="olin_rover" name="obstacle" type="obst_avoid.py"/>
+</launch>
