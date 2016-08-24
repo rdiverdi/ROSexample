@@ -13,13 +13,14 @@
     <section class="page-header">
       <h1 class="project-name">ROS Tutorial</h1>
       <h2 class="project-tagline"></h2>
+      {% for page in site.pages %}
+          <a class="btn" href={{ page.filename }}>{{ page.title }}</a>
+      {% endfor %}
       <a href="https://github.com/rdiverdi/ROSexample" class="btn">View on GitHub</a>
-      <a href="https://github.com/rdiverdi/ROSexample/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/rdiverdi/ROSexample/tarball/master" class="btn">Download .tar.gz</a>
     </section>
 
     <section class="main-content">
-      <p>CONTENT</p>
+    {{ content }}
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/rdiverdi/ROSexample">ROS Tutorial</a> is maintained by <a href="https://github.com/rdiverdi">rdiverdi</a>.</span>
