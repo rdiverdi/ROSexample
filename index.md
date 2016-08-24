@@ -6,7 +6,7 @@ filename: index
 
 # Introduction to ROS
 This page is a high level introduction to what ROS is, and how you will use it. Going through the tutorials ROS provides is actually a good way to learn how to use ROS, but they tend to dig into the details of how to do things without telling you what the point is.
-In [this page](tutorials), I give a quick summary of the point behind each of the first handful of tutorials.
+In [the tutorials page](tutorials), I give a quick summary of the point behind each of the first handful of tutorials.
 
 ### contents
 - [Introduction - what is this page about](#introduction-to-ros)
@@ -14,6 +14,7 @@ In [this page](tutorials), I give a quick summary of the point behind each of th
 - [How Does It Work - high level overview of ROS communication](#ok-that-makes-some-conceptual-sense-but-how-does-it-work)
 
 ## What is ROS?
+
 ### Communication
 ROS (Robot Operating System) is primarily a framework for managing communication between different portions of your code. There are a few reasons that this is extremely important:
 
