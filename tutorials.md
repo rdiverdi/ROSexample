@@ -7,7 +7,7 @@ filename: tutorials
 # Tutorial Guide
 This page is a guide through the ROS tutorials. It links out to each of the tutorials, but also includes a short comment about them to help you get through the tutorials efficiently.
 
-Note: This guide links to all of the ROS *Indigo*
+Note: This guide links to ROS *Indigo* tutorials
 
 ## contents
 - [Initial Setup](#initial-setup-tutorials)
@@ -54,7 +54,7 @@ This tutorial basically just tells you to go to your `catkin_ws` directory and r
 This tutorial is pretty good, it tells you how to start up ROS, run a node, and see what nodes are running. It should be pretty fast. This is also the beginning of the turtle-sim tutorials. In these tutorials you will start to control a turtle on your screen, which may seem very different from controlling a robot, but when you start working with a real robot, you will be able to control the robot in the same way.
 
 ### [Understanding ROS Topics](http://wiki.ros.org/ROS/Tutorials/UnderstandingTopics)
-This is the first tutorial where you really start to use the nice features of ROS. Don't worry too much about `rqt_graph`, it's just a quick way to visualize what is running, and how things are communicating. The `rostopic` tools this tutorial covers are extremely useful for debugging and testing code, and `rqt_plot` can also be useful, depending on what you want to see.
+This is the first tutorial where you really start to use the nice features of ROS. Don't worry too much about `rqt_graph`, it's just a quick way to visualize what is running, and how things are communicating. The `rostopic` tools this tutorial covers are extremely useful for debugging and testing code, and `rqt_plot` can also be useful, depending on what you want to see. ps. tab complete is your friend when using `rostopic pub`: it will automatically give you a template for your message.
 
 If you like videos, the video at the bottom of this tutorial covers everything from this tutorial and the previous one, but it's really long, definitely watch at double speed.
 
@@ -78,7 +78,7 @@ This package discusses building your own ROS messages and services, I would sugg
 ### [Writing a Simple Publisher and Subscriber (C++)](http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28c%2B%2B%29)
 Here's an example program which uses ROS (finally). Read through everything, figure out how it works, run the program (see next tutorial for how to run it), and play around. 
 
-The repository associated with this website also has a hello world script along with two other example scripts which show how to use a class structure. (There will probably be a page explaining this better, and eventually this will link to that)
+The repository associated with this website also has a hello world script along with two other example scripts which show how to use a class structure. The [this repo](this_repo) page has more information on those scripts.
 
 ### [Examining the Simple Publisher and Subscriber](http://wiki.ros.org/ROS/Tutorials/ExaminingPublisherSubscriber)
 This just tells you how to run the code from the last tutorial
