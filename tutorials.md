@@ -15,19 +15,23 @@ Note: This guide links to all of the ROS *Indigo*
 - [How Does It Work - high level overview of ROS communication](#ok-that-makes-some-conceptual-sense-but-how-does-it-work)
 
 ## Tutorials
+
 ### [Install ROS (ROS Indigo on Ubuntu)](http://wiki.ros.org/indigo/Installation/Ubuntu)
 This guide is pretty good, notes are:
+
 - in the install step, use the "Desktop-Full" install
 - in step 1.6 you can stop after running the commands in the first blue box
 
-###[Configuring your ROS environment](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment)
+### [Configuring your ROS environment](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment)
 This is a one-time setup to get a ROS filesystem setup on your computer.
+
 - If you just installed ROS, skip to step 3
 - Use the catkin instructions throughout the tutorials
 - Technically, you can call you workspace anything you want and put it anywhere you want, but please call it `catkin_ws` and put it in your home directory: it will make it easier to work with everyone else in the class.
 
 ### [Navigating the ROS file system](http://wiki.ros.org/ROS/Tutorials/NavigatingTheFilesystem)
 Don't spend too much time on this tutorial, `roscd` is probably the only thing you will use regularly
+
 - your "distro" is indigo
 
 ### [Creating a Package](http://wiki.ros.org/ROS/Tutorials/CreatingPackage)
