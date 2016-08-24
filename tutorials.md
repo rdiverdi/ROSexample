@@ -13,9 +13,9 @@ Note: This guide links to all of the ROS *Indigo*
 - [Initial Setup](#initial-setup-tutorials)
 - [ROS Package Tutorials](#ros-package-tutorials)
 - [Using ROS](#using-ros)
-- [Custom Messages and Services](custom-messages-and-services)
-- [Using ROS in Programs](using-ros-in-programs)
-- [Built in Tools](built-in-tools)
+- [Custom Messages and Services](#custom-messages-and-services)
+- [Using ROS in Programs](#using-ros-in-programs)
+- [Built in Tools](#built-in-tools)
 
 ## Initial Setup Tutorials
 
