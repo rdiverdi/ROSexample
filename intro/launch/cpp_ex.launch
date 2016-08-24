@@ -1,0 +1,5 @@
+<launch>
+	<node pkg="intro" name="hello_world" type="talker"/>
+	<node pkg="intro" name="hello_echo" type="echo"/>
+	<node pkg="intro" name="counter" type="counter"/>
+</launch>

@@ -1,0 +1,5 @@
+<launch>
+	<node pkg="intro" name="hello_world" type="hello_world.py"/>
+	<node pkg="intro" name="hello_echo" type="hello_echo.py"/>
+	<node pkg="intro" name="counter" type="base_ROS_coms.py"/>
+</launch>
