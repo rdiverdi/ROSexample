@@ -10,22 +10,24 @@ from receiving them
 import rospy
 from std_msgs.msg import String, Bool # I want to use string and boolean messages
 
+
 class HelloEcho():
     def __init__(self):
           """ initialize the ROS node and setup publishers and subscribers """
           rospy.init_node("hello_echo") #this node is named 'hello_echo'
-          self.echo_pub = rospy.Publisher("/echo_world", String, queue_size=10)
+          self.echo_pub = rospy.Publisher("echo_world", String, queue_size=10)
             #it publishes a string to the topic 'echo_world'
           self.status_pub = rospy.Publisher("/echo_status", Bool, queue_size=10)
             #it publishes a boolean to 'echo_status'
-          hello_sub = rospy.Subscriber("/hello_world", String, self.hello_cb)
+          hello_sub = rospy.Subscriber("hello_world", String, self.hello_cb)
             #it subscribes to 'hello_world' and runs 'self.hello_cb' when it receives a message
+          self.prefix = rospy.get_param("~prefix", "echo")
 
     def hello_cb(self, msg):
         """ runs when a message is received on topic 'hello_world'
         re-publishes the received message on 'echo_world'"""
         recieved = msg.data #get the received string
-        self.echo_pub.publish(recieved) #publish the received string to 'echo_world'
+        self.echo_pub.publish(self.prefix + ' ' + recieved) #publish the received string to 'echo_world'
 
     def run(self):
         """ main run loop for HelloEcho

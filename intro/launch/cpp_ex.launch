@@ -1,5 +1,11 @@
 <launch>
+    <group ns="cpp">
 	<node pkg="intro" name="hello_world" type="talker"/>
-	<node pkg="intro" name="hello_echo" type="echo"/>
-	<node pkg="intro" name="counter" type="counter"/>
+	<node pkg="intro" name="hello_echo" type="echo">
+		<param name="prefix" value="launch"/>
+	</node>
+	<node pkg="intro" name="counter" type="counter">
+		<remap from="hello_world" to="echo_world"/>
+	</node>
+    </group>
 </launch>

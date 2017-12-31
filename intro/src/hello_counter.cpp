@@ -11,7 +11,7 @@ public:
     count_pub = n.advertise<std_msgs::String>("message_count", 1000);
 
     //setup subscribers
-    sub = n.subscribe("/hello_world", 1000, &HelloCounter::hello_callback, this);
+    sub = n.subscribe("hello_world", 1000, &HelloCounter::hello_callback, this);
     message_count = 0;
   }
 

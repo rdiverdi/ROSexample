@@ -8,12 +8,12 @@ from std_msgs.msg import String #imports the string message type used by ROS
 def talker():
     pub = rospy.Publisher('hello_world', String, queue_size=10)
         #sets up a publisher on the topic "hello_world" which will publish a String
-    rospy.init_node('talker', anonymous=True)
+    rospy.init_node('talker')
         #initializes a ros node with the name "talker"
     rate = rospy.Rate(4) # 10hz
         #setup the rate at which to run the following loop (in hz)
     while not rospy.is_shutdown(): #as long as ROS is running
-        hello_str = "hello world %s" % rospy.get_time()
+        hello_str = "hello world %s" % round(rospy.get_time(), 2)
             #string containing "hello world" and the current time
         rospy.loginfo(hello_str) #write string to a log
         pub.publish(hello_str) #publish the string

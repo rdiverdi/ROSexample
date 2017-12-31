@@ -1,5 +1,11 @@
 <launch>
+    <group ns="python">
 	<node pkg="intro" name="hello_world" type="hello_world.py"/>
-	<node pkg="intro" name="hello_echo" type="hello_echo.py"/>
-	<node pkg="intro" name="counter" type="base_ROS_coms.py"/>
+	<node pkg="intro" name="hello_echo" type="hello_echo.py">
+		<param name="prefix" value="launch"/>
+	</node>
+	<node pkg="intro" name="counter" type="hello_counter.py">
+		<remap from="hello_world" to="echo_world"/>
+	</node>
+    </group>
 </launch>
