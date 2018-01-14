@@ -1,6 +1,8 @@
 #include "ros/ros.h"
+#include "signal.h"
 #include "std_msgs/String.h"
 #include "std_msgs/Bool.h"
+
 
 class HelloEcho
 {
@@ -18,23 +20,28 @@ public:
   }
 
   void hello_callback(const std_msgs::String& input){
+    // runs when a message is received on topic 'hello_world'
+    //  re-publishes the received message on 'echo_world'
     std_msgs::String output;
     output.data = prefix + " " + input.data;
     echo_pub.publish(output);
   }
 
   void pub_status(const ros::TimerEvent& time){
+	// publish true to the /echo_status topic every timer event
   	std_msgs::Bool msg;
 	msg.data = true;
 	status_pub.publish(msg);
   }
 
   void run(){
+	// set a timer to trigger every 2 seconds and run the pub_status method
   	ros::Timer timer = n.createTimer(ros::Duration(2), &HelloEcho::pub_status, this);
-	ros::spin();
-}
-
+	ros::spin(); // manage ROS publishing and subscribing
+  }
+  
 private:
+  // declare class variables
   ros::NodeHandle n; 
   ros::Publisher echo_pub;
   ros::Publisher status_pub;

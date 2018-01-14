@@ -22,12 +22,17 @@ class HelloEcho():
           hello_sub = rospy.Subscriber("hello_world", String, self.hello_cb)
             #it subscribes to 'hello_world' and runs 'self.hello_cb' when it receives a message
           self.prefix = rospy.get_param("~prefix", "echo")
+          rospy.on_shutdown(self.on_kill) #When the node is shut down, run the self.on_kill script
 
     def hello_cb(self, msg):
         """ runs when a message is received on topic 'hello_world'
         re-publishes the received message on 'echo_world'"""
         recieved = msg.data #get the received string
         self.echo_pub.publish(self.prefix + ' ' + recieved) #publish the received string to 'echo_world'
+
+    def on_kill(self):
+        """ publish "False" to the status topic when the node is killed """
+        self.status_pub.publish(False)
 
     def run(self):
         """ main run loop for HelloEcho
