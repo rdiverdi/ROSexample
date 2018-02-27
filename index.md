@@ -5,7 +5,7 @@ filename: index
 --- 
 
 # Website Guide
-This website is meant as a suppliment to the existing ROS tutorials and documentation. It is a quick guide through the high level concepts of ROS, aimed at people with no experience using ROS or similar frameworks. The [ROS Intro page](ROS) covers some of the basic concepts of ROS and how it is typically used, but doesn't cover details of how to acutually do anything. The [tutorials page](tutorials) links out to the existing ROS tutorials, but has short summaries of the purpose behind each of the tutorials. Hopefully this will help you go through the tutorials quickly and not waste time trying to understand something that is covered better in a later tutorial.
+This website is meant as a suppliment to the existing ROS tutorials and documentation. It is a quick guide through the high level concepts of ROS, aimed at people with no experience using ROS or similar frameworks. The [ROS Intro page](ROS) covers some of the basic concepts of ROS and how it is typically used, but doesn't cover details of how to acutually do anything. The [tutorials page](tutorials) links out to the existing ROS tutorials, but has short summaries of the purpose behind each of the tutorials. Hopefully this will help you go through the tutorials quickly and not waste time trying to understand something that is covered better in a later tutorial. The [This Repo page](this_repo) also has some suggestions on exercises to get started using ROS in code.
 
 ## Useful Links:
 These are all of the useful documentation pages I link to throughout this guide as well as some that I find useful when using ROS myself.
